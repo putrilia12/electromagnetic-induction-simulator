@@ -10,17 +10,22 @@ An interactive **Pygame-based simulation of electromagnetic induction** that dem
 * 🔄 Real-time electromagnetic induction simulation
 * 💡 Dynamic light bulb response based on induced voltage
 * 🌀 Magnetic field visualization (toggleable)
-* ⚙️ Adjustable coil parameters:
-  
+* ⚙️ Adjustable parameters:
+
+  * Magnetic induction
   * Coil length
   * Coil diameter
   * Number of turns
+    
 * 📊 Real-time parameter display:
 
-  * Magnetic induction
-  * Coil dimensions
   * Number of turns
-  * Induced voltage
+  * Coil diameter
+  * Coil length
+  * Magnetic induction
+  * Induced electromotive force (automatically calculated)
+
+> Note: All parameters can be adjusted by the user except the induced electromotive force (EMF), which is calculated automatically based on the simulation.
 
 ---
 
@@ -30,11 +35,29 @@ This simulation is based on **Faraday’s Law of Electromagnetic Induction**:
 
 > A changing magnetic flux through a coil induces an electromotive force (EMF).
 
-The program calculates:
+### 📐 Formulas Used
 
-* Magnetic flux (Φ)
-* Change in flux over time
-* Induced EMF (E = -dΦ/dt)
+* **Faraday’s Law**
+  E = - dΦ/dt
+
+* **Magnetic Flux**
+  Φ = B · A
+
+* **Area of Coil (Circle)**
+  A = πr²
+
+* **Numerical Approximation of EMF**
+  E ≈ - ΔΦ / Δt
+
+* **Light Intensity Mapping (Sigmoid Function)**
+  f(x) = 220 / (1 + e^(-x + 8)) + 35
+
+### 🧠 Explanation
+
+* Magnetic flux (Φ) is calculated from the magnetic field (B) and the coil area (A).
+* When the magnet moves, the flux changes over time.
+* This change generates an induced electromotive force (EMF).
+* The EMF value is then used to control the brightness of the light bulb using a sigmoid function for smoother visualization.
 
 ---
 
