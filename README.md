@@ -11,7 +11,7 @@ An interactive physics simulation built with **Pygame** that demonstrates **Fara
 * 💡 Dynamic light bulb response based on induced voltage
 * 🌀 Magnetic field visualization (toggleable)
 * ⚙️ Adjustable coil parameters:
-* 
+  
   * Coil length
   * Coil diameter
   * Number of turns
