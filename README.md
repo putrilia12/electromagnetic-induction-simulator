@@ -1,6 +1,6 @@
 # ⚡ Electromagnetic Induction Simulator
 
-An interactive physics simulation built with **Pygame** that demonstrates **Faraday’s Law**. Users can move a magnet through a coil and observe how motion generates electric current in real time.
+An interactive **Pygame-based simulation** of electromagnetic induction that demonstrates **Faraday’s Law** by allowing users to move a magnet through a coil, adjust coil parameters (such as length, diameter, and number of turns), and observe real-time changes in magnetic field, induced electromotive force, and light bulb intensity
 
 ---
 
