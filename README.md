@@ -97,7 +97,7 @@ A = coil area
 
 * **F** → Show/hide magnetic field
 * **W / S** → Increase / decrease magnetic field strength
-* * **Arrow Up / Down** → Adjust coil diameter
+* **Arrow Up / Down** → Adjust coil diameter
 * **Arrow Left / Right** → Adjust coil length along with the number of turns
 ---
 
