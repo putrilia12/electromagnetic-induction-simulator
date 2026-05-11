@@ -12,7 +12,7 @@ An interactive **Pygame-based simulation of electromagnetic induction** that dem
 * 🌀 Magnetic field visualization (toggleable)
 * ⚙️ Adjustable parameters:
 
-  * Magnetic induction
+  * Magnetic field strength
   * Coil length
   * Coil diameter
   * Number of turns
@@ -31,9 +31,23 @@ An interactive **Pygame-based simulation of electromagnetic induction** that dem
 
 ## 🧪 Physics Concept
 
-This simulation is based on **Faraday’s Law of Electromagnetic Induction**:
+This simulation demonstrates **Faraday’s Law of Electromagnetic Induction**, where a changing magnetic flux through a coil generates an induced electromotive force (EMF).
 
-> A changing magnetic flux through a coil induces an electromotive force (EMF).
+In the simulation, users can move a magnet interactively through a coil. As the magnet moves relative to the coil, the magnetic field passing through the coil changes over time. This causes the magnetic flux through the coil to vary continuously.
+
+According to Faraday’s Law, a change in magnetic flux induces an EMF in the coil:
+
+> A faster change in magnetic flux produces a larger induced voltage.
+
+The simulation numerically approximates this phenomenon in real time by monitoring the magnet’s movement and calculating the resulting change in magnetic flux across the coil.
+
+The induced EMF is then visualized using a virtual light bulb:
+- Low EMF → dim light
+- High EMF → brighter light
+
+To create smoother visual feedback, the light intensity is mapped using a sigmoid-based brightness function rather than a direct linear mapping.
+
+This project is intended as an educational visualization tool and uses a simplified numerical approximation of electromagnetic induction.
 
 ## 📐 Formulas Used
 
@@ -54,6 +68,14 @@ A = πr²
 
 Numerical Approximation:
 ε ≈ -N (ΔΦ/Δt)
+
+Where:
+ε = induced electromotive force (EMF)
+N = number of coil turns
+Φ = magnetic flux
+B = magnetic field strength
+A = coil area
+θ = angle between magnetic field and coil surface normal
 ```
 
 ### 🧠 Explanation
@@ -61,7 +83,7 @@ Numerical Approximation:
 * Magnetic flux (Φ) is calculated from the magnetic field (B) and the coil area (A).
 * When the magnet moves relative to the coil, the magnetic flux through the coil changes over time.
 * This changing flux induces an electromotive force (EMF) according to Faraday’s Law.
-* The induced EMF is then used to control the brightness of the light bulb using a sigmoid function for smoother visual representation.
+* The calculated EMF is mapped to the brightness of the virtual light bulb using a sigmoid function to create smoother visual feedback.
 
 ---
 
@@ -75,7 +97,7 @@ Numerical Approximation:
 
 * **F** → Show/hide magnetic field
 * **W / S** → Increase / decrease magnetic induction
-* **Arrow Up / Down** → Adjust coil length (diameter)
+* **Arrow Up / Down** → Adjust coil diameter
 * **Arrow Left / Right** → Change number of turns
 
 ---
