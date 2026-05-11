@@ -1,6 +1,6 @@
 # ⚡ Electromagnetic Induction Simulator
 
-An interactive **Pygame-based simulation** of electromagnetic induction that demonstrates **Faraday’s Law** by allowing users to move a magnet through a coil, adjust coil parameters (such as length, diameter, and number of turns), and observe real-time changes in magnetic field, induced electromotive force, and light bulb intensity
+An interactive **Pygame-based simulation of electromagnetic induction** that demonstrates **Faraday’s Law** by allowing users to move a magnet through a coil, adjust coil parameters (such as length, diameter, and number of turns), and observe real-time changes in magnetic field, induced electromotive force, and light bulb intensity
 
 ---
 
