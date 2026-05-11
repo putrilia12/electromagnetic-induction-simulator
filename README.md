@@ -35,22 +35,26 @@ This simulation is based on **Faraday’s Law of Electromagnetic Induction**:
 
 > A changing magnetic flux through a coil induces an electromotive force (EMF).
 
-### 📐 Formulas Used
+## 📐 Formulas Used
 
-* **Faraday’s Law**
-  E = - dΦ/dt
+```text
+Faraday's Law:
+ε = -N (dΦ/dt)
 
-* **Magnetic Flux**
-  Φ = B · A
+Magnetic Flux:
+Φ = B · A · cos(θ)
 
-* **Area of Coil (Circle)**
-  A = πr²
+For this simulation:
+θ = 0°
+therefore:
+Φ = B · A
 
-* **Numerical Approximation of EMF**
-  E ≈ - ΔΦ / Δt
+Coil Area:
+A = πr²
 
-* **Light Intensity Mapping (Sigmoid Function)**
-  f(x) = 220 / (1 + e^(-x + 8)) + 35
+Numerical Approximation:
+ε ≈ -N (ΔΦ/Δt)
+```
 
 ### 🧠 Explanation
 
