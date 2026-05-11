@@ -59,9 +59,9 @@ Numerical Approximation:
 ### 🧠 Explanation
 
 * Magnetic flux (Φ) is calculated from the magnetic field (B) and the coil area (A).
-* When the magnet moves, the flux changes over time.
-* This change generates an induced electromotive force (EMF).
-* The EMF value is then used to control the brightness of the light bulb using a sigmoid function for smoother visualization.
+* When the magnet moves relative to the coil, the magnetic flux through the coil changes over time.
+* This changing flux induces an electromotive force (EMF) according to Faraday’s Law.
+* The induced EMF is then used to control the brightness of the light bulb using a sigmoid function for smoother visual representation.
 
 ---
 
